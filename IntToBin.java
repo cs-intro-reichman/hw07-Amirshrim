@@ -6,11 +6,10 @@ public class IntToBin {
         System.out.println("Binary representation of " + x + " is: " + toBinary(x));
     }
 
-    /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
-    public static String toBinary(int x) {
-        if (x<=0){
-            return "";
-        }
-        return toBinary(x/2) + x%2;
-    }    
- }
+    public static String intToBin(int n) {
+    if (n < 2) {
+        return Integer.toString(n); 
+    }
+    return intToBin(n / 2) + (n % 2);
+}
+}
